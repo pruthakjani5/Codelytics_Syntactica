@@ -1988,8 +1988,8 @@ def main():
                 }
                 filename = f"code.{extension_map.get(language, 'txt')}"
     
-        # Only run analysis if we have content from either upload or paste
-        if content and content.strip():
+    # Run analysis if we have content from either upload or paste
+    if content and content.strip():
             # Initialize analyzer and perform analysis
             analyzer = CodeAnalyzer(api_key)
             if not language:
