@@ -693,7 +693,7 @@ class CodeAnalyzer:
         if api_key:
             genai.configure(api_key=api_key)
             # Use the correct model name for Gemini
-            self.model = genai.GenerativeModel('gemini-1.5-flash')
+            self.model = genai.GenerativeModel('gemini-2.5-flash')
         else:
             self.model = None
     
@@ -933,7 +933,7 @@ def generate_class_hierarchy(code: str, language: str) -> str:
         api_key = os.getenv('GEMINI_API_KEY')
         if api_key:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             You are a Senior Software Engineer specializing in software architecture and UML diagrams.
@@ -1044,7 +1044,7 @@ def generate_call_graph(code: str, language: str) -> str:
         api_key = os.getenv('GEMINI_API_KEY')
         if api_key:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             You are a Senior Software Engineer specializing in code analysis and software architecture.
@@ -1136,7 +1136,7 @@ def generate_control_flow_graph(code: str, language: str) -> str:
         api_key = os.getenv('GEMINI_API_KEY')
         if api_key:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             You are a Senior Software Engineer specializing in program analysis and control flow visualization.
@@ -1243,7 +1243,7 @@ def generate_package_dependency_graph(code: str, language: str) -> str:
         api_key = os.getenv('GEMINI_API_KEY')
         if api_key:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             You are a Senior Software Engineer specializing in software architecture and dependency analysis.
@@ -1344,7 +1344,7 @@ def generate_data_flow_diagram(code: str, language: str) -> str:
         api_key = os.getenv('GEMINI_API_KEY')
         if api_key:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             You are a Senior Software Engineer specializing in program analysis and data flow visualization.
